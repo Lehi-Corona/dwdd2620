@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore More Webesite</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="max-w-6xl mx-auto">
+    <header class="grid grid-cols-[auto_44px_44px] gap-2 p-2 border-b">
+        <img class="w-40 h=20" src="images/2620logo.svg">
+        <a class="border w-11 h-11 flex justify-around rounded-full hover:bg-slate-100" href="#"><img class="w-4" src="images/person-circle.svg"></a>
+        <a class="border w-11 h-11 flex justify-around rounded-full hover:bg-slate-100" href="#"><img class="w-4" src="images/cart-fill.svg"></a>
+    </header>
+
+    <nav class="bg-sky-950">
+        <ul class="flex flex-col sm:flex-row sm:border-b">
+            <li class="text-slate-50 border-b border-neutral-700 sm:border-b-0 hover:bg-slate-400">
+            <a href="index.html" class="block py-2 px-3">Tents</a>
+            </li>
+            <li class="text-slate-50 border-b border-neutral-700 sm:border-b-0 hover:bg-slate-400">
+            <a href="#" class="block py-2 px-3">Men</a>
+            </li>
+            <li class="text-slate-50 border-b border-neutral-700 sm:border-b-0 hover:bg-slate-400">
+            <a href="#" class="block py-2 px-3">Snowboards</a>
+            </li>
+            <li class="text-slate-50 border-b border-neutral-700 sm:border-b-0 hover:bg-slate-400 bg-slate-400">
+            <a href="cart.html" class="block py-2 px-3">Cart</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="px-4 py-6">
+        <h1 class="text-sky-950 text-2xl px-2 py-3">Cart Summary</h1>
+      
+        <div class="flex">
+          <fieldset class="bg-slate-400 border-2 border-sky-950 p-6 rounded w-full max-w-md md:max-w-2xl">
+            <h2 class="text-sky-950 text-2xl font-semibold mt-6">Shipping</h2>
+      
+            <form method="get" class="space-y-4">
+              <!-- First Name -->
+              <div>
+                <label for="firstName">First Name:</label><br>
+                <input type="text" id="firstName" name="firstName" required placeholder="First Name"
+                  class="w-full p-2 rounded border placeholder-gray-400 focus:outline-none focus:outline-2 focus:outline-sky-950 transition">
+              </div>
+      
+              <!-- Last Name -->
+              <div>
+                <label for="lastName">Last Name:</label><br>
+                <input type="text" id="lastName" name="lastName" required placeholder="Last Name"
+                  class="w-full p-2 rounded border placeholder-gray-400 focus:outline-none focus:outline-2 focus:outline-sky-950 transition">
+              </div>
+            
+      
+              <!-- Address -->
+              <div>
+                <label for="address">Address:</label><br>
+                <input type="text" id="address" name="address" required placeholder="123 Main St"
+                  class="w-full p-2 rounded border placeholder-gray-400 focus:outline-none focus:outline-2 focus:outline-sky-950 transition">
+              </div>
+      
+              <!-- City -->
+              <div>
+                <label for="city">City:</label><br>
+                <input type="text" id="city" name="city" required placeholder="City"
+                  class="w-full p-2 rounded border placeholder-gray-400 focus:outline-none focus:outline-2 focus:outline-sky-950 transition">
+              </div>
+      
+              <!-- State -->
+              <div>
+                <label for="state">State:</label><br>
+                <select name="state" id="state" required
+                  class="shadow appearance-none border rounded w-full p-2 text-gray-400 focus:outline-none focus:outline-2 focus:outline-sky-950 transition">
+                  <option value="" disabled selected>Select your state</option>
+                  <option value="AL">Alabama</option>
+                  <option value="AK">Alaska</option>
+                  <option value="AZ">Arizona</option>
+                  <option value="AR">Arkansas</option>
+                  <option value="CA">California</option>
+                  <option value="CO">Colorado</option>
+                  <option value="CT">Connecticut</option>
+                  <option value="DE">Delaware</option>
+                  <option value="FL">Florida</option>
+                  <option value="GA">Georgia</option>
+                  <option value="HI">Hawaii</option>
+                  <option value="ID">Idaho</option>
+                  <option value="IL">Illinois</option>
+                  <option value="IN">Indiana</option>
+                  <option value="IA">Iowa</option>
+                  <option value="KS">Kansas</option>
+                  <option value="KY">Kentucky</option>
+                  <option value="LA">Louisiana</option>
+                  <option value="ME">Maine</option>
+                  <option value="MD">Maryland</option>
+                  <option value="MA">Massachusetts</option>
+                  <option value="MI">Michigan</option>
+                  <option value="MN">Minnesota</option>
+                  <option value="MS">Mississippi</option>
+                  <option value="MO">Missouri</option>
+                  <option value="MT">Montana</option>
+                  <option value="NE">Nebraska</option>
+                  <option value="NV">Nevada</option>
+                  <option value="NH">New Hampshire</option>
+                  <option value="NJ">New Jersey</option>
+                  <option value="NM">New Mexico</option>
+                  <option value="NY">New York</option>
+                  <option value="NC">North Carolina</option>
+                  <option value="ND">North Dakota</option>
+                  <option value="OH">Ohio</option>
+                  <option value="OK">Oklahoma</option>
+                  <option value="OR">Oregon</option>
+                  <option value="PA">Pennsylvania</option>
+                  <option value="RI">Rhode Island</option>
+                  <option value="SC">South Carolina</option>
+                  <option value="SD">South Dakota</option>
+                  <option value="TN">Tennessee</option>
+                  <option value="TX">Texas</option>
+                  <option value="UT">Utah</option>
+                  <option value="VT">Vermont</option>
+                  <option value="VA">Virginia</option>
+                  <option value="WA">Washington</option>
+                  <option value="WV">West Virginia</option>
+                  <option value="WI">Wisconsin</option>
+                  <option value="WY">Wyoming</option>
+                </select>
+              </div>
+      
+              <!-- ZIP Code -->
+              <div>
+                <label for="zip">ZIP Code:</label><br>
+                <input type="text" id="zip" name="zip" required pattern="\d{5}" placeholder="e.g. 12345"
+                  class="w-full p-2 rounded border placeholder-gray-400 focus:outline-none focus:outline-2 focus:outline-sky-950 transition">
+              </div>
+      
+              <!-- Phone -->
+              <div>
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="e.g. 5551234567"
+                  class="w-full p-2 rounded border placeholder-gray-400 focus:outline-2 focus:outline-sky-950 transition">
+              </div>
+      
+              <!-- Shipping Options (Grid Layout) -->
+              <h2 class="text-sky-950 text-2xl font-semibold mt-6">Shipping</h2>
+              <div class="border rounded-xl border-zinc-400 bg-zinc-200">
+                <label class="grid grid-cols-[22px_auto_100px] space-x-1 p-2 border-b-2 border-slate-300">
+                    <input type="radio" name="Shipping" value="standard" checked/>
+                    <div class="text-sky-800 font-semibod hover:text-sky-950">Standard <span
+                        class="block text-gray-400 font-light text-xs">5-7 days</span></div>
+                    <div class="text-right font-bold pr-1">Free</div>
+                </label>
+            
+                <div class="border rounded-xl border-zinc-400 bg-zinc-200">
+                    <label class="grid grid-cols-[22px_auto_100px] space-x-1 p-2 border-b-2 border-slate-300">
+                        <input type="radio" name="Shipping" value="standard" checked/>
+                        <div class="text-sky-800 font-semibod hover:text-sky-950">Standard <span
+                            class="block text-gray-400 font-light text-xs">2 days</span></div>
+                        <div class="text-right font-bold pr-1">$10.00</div>
+                    </label>
+
+                <div class="border rounded-xl border-zinc-400 bg-zinc-200">
+                     <label class="grid grid-cols-[22px_auto_100px] space-x-1 p-2 border-b-2 border-slate-300">
+                         <input type="radio" name="Shipping" value="standard" checked/>
+                         <div class="text-sky-800 font-semibod hover:text-sky-950">Standard <span
+                            class="block text-gray-400 font-light text-xs">1 day</span></div>
+                         <div class="text-right font-bold pr-1">$20.00</div>
+                     </label>
+
+                
+                
+              </div>
+            </form>
+            
+          </fieldset>
+        </div>
+
+        <!-- Submit Button with Hover + Transition -->
+        <h2 class="text-sky-950 text-2xl font-semibold mt-6">Payment</h2>
+       
+        <section class="flex mb-5">
+        <div class="mr-3">
+            <input type="submit" value="cash app"
+              class="bg-green-600 text-white px-11 py-2 rounded w-40 md:max-w-2xl cursor-pointer 
+                     hover:bg-sky-800 transition duration-300 ease-in-out">
+         </div>
+        
+        <div class="mr-3">
+            <input type="submit" value="visa"
+              class="bg-red-600 text-white px-4 py-2 rounded w-40 md:max-w-2xl cursor-pointer 
+                     hover:bg-sky-800 transition duration-300 ease-in-out">
+        </div>
+        
+        <div>
+            <input type="submit" value="Zelle"
+              class="bg-fuchsia-400 text-white px-12 py-2 rounded w-40 md:max-w-2xl cursor-pointer 
+                     hover:bg-sky-800 transition duration-300 ease-in-out">
+        </div>
+        </section>
+        
+        <div>
+          <input type="submit" value="Place Order"
+            class="bg-sky-950 text-white px-4 py-2 rounded w-full max-w-md md:max-w-2xl cursor-pointer 
+                   hover:bg-sky-800 transition duration-300 ease-in-out">
+        </div>
+
+      </main>
+      
+    
+    <footer>
+        <p class="text-center text-sm text-zinc-500">&copy; Lehi Corona &bull; DWDD 2620</p>
+    </footer>
+
+        
+</div>
+</body>
+</html>
