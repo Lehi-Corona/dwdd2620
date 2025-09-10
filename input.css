@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@config "./tailwind.config.js";
+
+.cards{@apply grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 m-2}
+.cards div {@apply border border-sky-950 rounded-md overflow-hidden bg-slate-400}
+.cards span {@apply block text-center text-lg py-2}
+.cards img {@apply w-full}
+.cards a {@apply block p-1 mx-4 my-2 text-center bg-sky-950 text-white rounded-full border-2 border-sky-950}
+.cards a:hover {@apply bg-gray-600 border-sky-950}
