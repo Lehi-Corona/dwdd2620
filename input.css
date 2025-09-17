@@ -7,3 +7,50 @@
 .cards img {@apply w-full}
 .cards a {@apply block p-1 mx-4 my-2 text-center bg-sky-950 text-white rounded-full border-2 border-sky-950}
 .cards a:hover {@apply bg-gray-600 border-sky-950}
+
+/* input.css */
+
+.card {
+  @apply bg-white rounded-xl shadow-md overflow-hidden flex flex-col;
+}
+
+.card-image {
+  @apply w-full h-48 object-cover;
+}
+
+.card-text {
+  @apply p-4 flex flex-col gap-2;
+}
+
+.card-title {
+  @apply text-lg font-bold text-gray-800;
+}
+
+.card-desc {
+  @apply text-sm text-gray-600;
+}
+
+.card-price {
+  @apply text-base font-semibold text-indigo-600;
+}
+
+.card-buttons {
+  @apply flex justify-between p-4;
+}
+
+.btn {
+  @apply px-4 py-2 rounded-lg text-white font-medium transform transition-transform;
+}
+
+.btn-itinerary {
+  @apply bg-blue-500 hover:bg-blue-600 hover:translate-y-[1px];
+}
+
+.btn-book {
+  @apply bg-green-500 hover:bg-green-600 hover:translate-y-[1px];
+}
+
+/* grid for the container */
+#card-container {
+  @apply grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-6;
+}
