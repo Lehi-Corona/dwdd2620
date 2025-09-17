@@ -3,18 +3,15 @@ import { snowboards } from "./data/snowboards.js";
 const container = document.getElementById("card-container");
 
 snowboards.forEach(board => {
-  // card wrapper
   const card = document.createElement("div");
   card.className = "card";
 
-  // image
   const img = document.createElement("img");
   img.src = board.image;
   img.alt = board.name;
   img.className = "card-image";
   card.appendChild(img);
 
-  // text container
   const text = document.createElement("div");
   text.className = "card-text";
 
@@ -33,16 +30,13 @@ snowboards.forEach(board => {
   text.append(title, desc, price);
   card.appendChild(text);
 
-  // buttons
   const buttons = document.createElement("div");
   buttons.className = "card-buttons";
   buttons.innerHTML = `
     <a href="#" class="btn btn-itinerary">Details</a>
     <a href="#" class="btn btn-book">Buy Now</a>
   `;
-
   card.appendChild(buttons);
 
-  // append card
   container.appendChild(card);
 });

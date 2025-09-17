@@ -8,49 +8,46 @@
 .cards a {@apply block p-1 mx-4 my-2 text-center bg-sky-950 text-white rounded-full border-2 border-sky-950}
 .cards a:hover {@apply bg-gray-600 border-sky-950}
 
-/* input.css */
+#card-container {
+  @apply grid sm:grid-cols-2 lg:grid-cols-3 max-w-screen-xl mx-auto gap-6;
+}
 
 .card {
-  @apply bg-white rounded-xl shadow-md overflow-hidden flex flex-col;
+  @apply m-4 bg-slate-300 shadow-md rounded-2xl overflow-hidden flex flex-col transition transform hover:scale-[1.02];
 }
 
 .card-image {
-  @apply w-full h-48 object-cover;
+  @apply w-full h-85 object-cover;
 }
 
 .card-text {
-  @apply p-4 flex flex-col gap-2;
+  @apply p-4 flex-1;
 }
 
 .card-title {
-  @apply text-lg font-bold text-gray-800;
+  @apply text-xl font-bold mb-2;
 }
 
 .card-desc {
-  @apply text-sm text-gray-600;
+  @apply text-black text-sm mb-2;
 }
 
 .card-price {
-  @apply text-base font-semibold text-indigo-600;
+  @apply text-lg font-semibold text-orange-600 mb-4;
 }
 
 .card-buttons {
-  @apply flex justify-between p-4;
+  @apply flex gap-2 p-4;
 }
 
 .btn {
-  @apply px-4 py-2 rounded-lg text-white font-medium transform transition-transform;
+  @apply px-4 py-2 rounded text-white transition transform hover:translate-y-[1px];
 }
 
 .btn-itinerary {
-  @apply bg-blue-500 hover:bg-blue-600 hover:translate-y-[1px];
+  @apply bg-blue-500;
 }
 
 .btn-book {
-  @apply bg-green-500 hover:bg-green-600 hover:translate-y-[1px];
-}
-
-/* grid for the container */
-#card-container {
-  @apply grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-6;
+  @apply bg-sky-950;
 }
