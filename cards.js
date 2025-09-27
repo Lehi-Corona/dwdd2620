@@ -1,4 +1,19 @@
 import { snowboards } from "./data/snowboards.js";
+import { header } from "./modules/header.mjs";
+import { footer } from "./modules/footer.mjs";
+import { navbar } from "./modules/navigation.mjs";
+
+
+
+//insert header into html
+header()
+
+//insert footer into html
+footer ('2025')
+
+// list of links & navigation html 
+import {links} from './data/links.js';
+navbar(links)
 
 const container = document.getElementById("card-container");
 
@@ -40,3 +55,4 @@ snowboards.forEach(board => {
 
   container.appendChild(card);
 });
+
