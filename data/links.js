@@ -15,7 +15,9 @@ export const links = [
   {
     "name": "Cart",
     "href": "cart.html"
+  },
+  {
+    "name": "Color Docs",
+    "href": "color-documentation.html"
   }
 ];
-
-  

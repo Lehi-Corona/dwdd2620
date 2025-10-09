@@ -3,56 +3,55 @@ import { header } from "./modules/header.mjs";
 import { footer } from "./modules/footer.mjs";
 import { navbar } from "./modules/navigation.mjs";
 
-
-
 //insert header into html
 header()
 
 //insert footer into html
 footer ('2025')
 
-// list of links & navigation html 
+// list of links & navigation 
 import {links} from './data/links.js';
 navbar(links)
 
 const container = document.getElementById("card-container");
 
-snowboards.forEach(board => {
-  const card = document.createElement("div");
-  card.className = "card";
+if (container) {
+  snowboards.forEach(board => {
+    const card = document.createElement("div");
+    card.className = "card";
 
-  const img = document.createElement("img");
-  img.src = board.image;
-  img.alt = board.name;
-  img.className = "card-image";
-  card.appendChild(img);
+    const img = document.createElement("img");
+    img.src = board.image;
+    img.alt = board.name;
+    img.className = "card-image";
+    card.appendChild(img);
 
-  const text = document.createElement("div");
-  text.className = "card-text";
+    const text = document.createElement("div");
+    text.className = "card-text";
 
-  const title = document.createElement("h2");
-  title.textContent = board.name;
-  title.className = "card-title";
+    const title = document.createElement("h2");
+    title.textContent = board.name;
+    title.className = "card-title";
 
-  const desc = document.createElement("p");
-  desc.textContent = board.description;
-  desc.className = "card-desc";
+    const desc = document.createElement("p");
+    desc.textContent = board.description;
+    desc.className = "card-desc";
 
-  const price = document.createElement("p");
-  price.textContent = board.price;
-  price.className = "card-price";
+    const price = document.createElement("p");
+    price.textContent = board.price;
+    price.className = "card-price";
 
-  text.append(title, desc, price);
-  card.appendChild(text);
+    text.append(title, desc, price);
+    card.appendChild(text);
 
-  const buttons = document.createElement("div");
-  buttons.className = "card-buttons";
-  buttons.innerHTML = `
-    <a href="#" class="btn btn-itinerary">Details</a>
-    <a href="#" class="btn btn-book">Buy Now</a>
-  `;
-  card.appendChild(buttons);
+    const buttons = document.createElement("div");
+    buttons.className = "card-buttons";
+    buttons.innerHTML = `
+      <a href="#" class="btn btn-itinerary">Details</a>
+      <a href="#" class="btn btn-book">Buy Now</a>
+    `;
+    card.appendChild(buttons);
 
-  container.appendChild(card);
-});
-
+    container.appendChild(card);
+  });
+}

@@ -1,19 +1,119 @@
 @import "tailwindcss";
 @config "./tailwind.config.js";
 
-.cards{@apply grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 m-2}
-.cards div {@apply border border-sky-950 rounded-md overflow-hidden bg-slate-400}
-.cards span {@apply block text-center text-lg py-2}
-.cards img {@apply w-full}
-.cards a {@apply block p-1 mx-4 my-2 text-center bg-sky-950 text-white rounded-full border-2 border-sky-950}
-.cards a:hover {@apply bg-gray-600 border-sky-950}
+/* Card Layout */
+.cards {
+  @apply grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 m-2;
+}
 
+.cards div {
+  @apply border border-sky-dark rounded-md overflow-hidden bg-sky-light;
+}
+
+.cards span {
+  @apply block text-center text-lg py-2 text-sky-dark;
+}
+
+.cards img {
+  @apply w-full;
+}
+
+.cards a {
+  @apply block p-1 mx-4 my-2 text-center bg-sky text-sky-light rounded-full border-2 border-sky-dark transition;
+}
+
+.cards a:hover {
+  @apply bg-sky-dark border-sky-dark text-sky-light;
+}
+
+/* Added Theme Settings */
+@theme {
+  --font-arimo: "Arimo", sans-serif;
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+
+  /* Reset Tailwind colors */
+  --color-* : initial;
+
+  /* Main colors */
+  --color-sky-light: #E0F2FE; /* very light blue */
+  --color-sky: #0284C7;       /* bright sky blue */
+  --color-sky-dark: #0C4A6E;  /* deep navy blue */
+  --color-sky-950: #082F49;   /* darkest navy */
+
+  /* Add back white manually (needed for text-white, bg-white) */
+  --color-white: #FFFFFF;
+
+  /* Grays */
+  --color-gray-0: #FFFFFF;
+  --color-gray-10: #F8FAFC;
+  --color-gray-20: #E2E8F0;
+  --color-gray-30: #CBD5E1;
+  --color-gray-40: #94A3B8;
+  --color-gray-50: #64748B;
+  --color-gray-60: #475569;
+  --color-gray-70: #334155;
+  --color-gray-80: #1E293B;
+  --color-gray-100: #0F172A;
+}
+
+
+/* Base Styles */
+body {
+  font-family: var(--font-arimo);
+  @apply bg-gray-10 text-gray-80;
+}
+
+main h1 {
+  @apply text-sky-950 text-3xl px-2 py-4 font-semibold;
+}
+
+main h2 {
+  @apply text-sky-dark text-2xl px-2 py-3 font-semibold;
+}
+
+label {
+  @apply text-sky-dark font-medium;
+}
+
+input, select {
+  @apply border border-gray-30 rounded-md p-2 text-gray-80 bg-gray-0;
+}
+
+/* Navigation Styles */
+nav a {
+  @apply text-sky-dark font-semibold transition;
+}
+
+nav a:hover {
+  @apply text-sky;
+}
+
+nav a.active {
+  @apply text-sky bg-sky-dark bg-opacity-10 px-3 py-1 rounded border-l-4 border-sky md:border-l-0 md:border-b-2 md:bg-transparent md:px-0 md:py-0;
+}
+
+header {
+  @apply border-gray-30;
+}
+
+/* Buttons */
+input[type="submit"] {
+  @apply font-semibold text-white rounded transition duration-300 ease-in-out cursor-pointer;
+}
+
+input[type="submit"]:hover {
+  @apply opacity-90;
+}
+
+/* Card Grid */
 #card-container {
   @apply grid sm:grid-cols-2 lg:grid-cols-3 max-w-screen-xl mx-auto gap-6;
 }
 
 .card {
-  @apply m-4 bg-slate-300 shadow-md rounded-2xl overflow-hidden flex flex-col transition transform hover:scale-[1.02];
+  @apply m-4 bg-sky-light shadow-md rounded-2xl overflow-hidden flex flex-col transition transform hover:scale-[1.02];
 }
 
 .card-image {
@@ -25,29 +125,30 @@
 }
 
 .card-title {
-  @apply text-xl font-bold mb-2;
+  @apply text-xl font-bold mb-2 text-sky-dark;
 }
 
 .card-desc {
-  @apply text-black text-sm mb-2;
+  @apply text-gray-70 text-sm mb-2;
 }
 
 .card-price {
-  @apply text-lg font-semibold text-orange-600 mb-4;
+  @apply text-lg font-semibold text-sky mb-4;
 }
 
 .card-buttons {
   @apply flex gap-2 p-4;
 }
 
+/* Buttons */
 .btn {
-  @apply px-4 py-2 rounded text-white transition transform hover:translate-y-[1px];
+  @apply px-4 py-2 rounded text-white font-semibold transition transform hover:translate-y-[1px];
 }
 
 .btn-itinerary {
-  @apply bg-blue-500;
+  @apply bg-sky hover:bg-sky-dark;
 }
 
 .btn-book {
-  @apply bg-sky-950;
+  @apply bg-sky-dark hover:bg-sky;
 }

@@ -1,30 +1,32 @@
-
 export function navbar(links) {
     const navElement = document.querySelector("nav");
-    navElement.className = "bg-sky-950";
-
+    if (!navElement) return;
+  
+    navElement.innerHTML = ""; 
+  
     const navUl = document.createElement("ul");
-    navUl.className = "flex flex-col sm:flex-row sm:border-b";
-
+    navUl.className =
+      "flex flex-col md:flex-row md:gap-6 text-[var(--color-gray-10)] md:text-[var(--color-gray-80)]";
+  
     const currentPage = window.location.pathname.split("/").pop();
-
-    links.forEach(link => {
-        const listItem = document.createElement("li");
-        listItem.className = "border-b border-neutral-700 sm:border-b-0 hover:bg-slate-400";
-
-        const anchor = document.createElement("a");
-        anchor.textContent = link.name;
-        anchor.href = link.href;
-        anchor.className = "block py-2 px-3";
-
-        // Apply ternary operator
-        currentPage === link.href
-            ? (listItem.classList.add("bg-slate-400"), anchor.classList.add("text-white"))
-            : anchor.classList.add("text-slate-300", "hover:text-white");
-
-        listItem.appendChild(anchor);
-        navUl.appendChild(listItem);
+  
+    links.forEach((link) => {
+      const li = document.createElement("li");
+      const anchor = document.createElement("a");
+      anchor.textContent = link.name;
+      anchor.href = link.href;
+  
+      anchor.className =
+        "block py-2 px-3 hover:text-[var(--color-sky-light)] md:hover:text-[var(--color-sky-dark)] transition";
+  
+      if (currentPage === link.href) {
+        anchor.classList.add("text-[var(--color-sky)]", "font-semibold");
+      }
+  
+      li.appendChild(anchor);
+      navUl.appendChild(li);
     });
-
+  
     navElement.appendChild(navUl);
-}
+  }
+  

@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore More Webesite</title>
+    <title>Explore More Website</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400..700&family=IBM+Plex+Mono:wght@300;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="max-w-6xl mx-auto">
@@ -18,11 +21,10 @@
      <!--Empty nav for module-->
      <nav></nav>
     
-
-    <main>
-        <h1 class="text-sky-950 text-2xl px-2 py-3">Cart</h1>
-            <img src="images/pexels-vie-studio-4439457.webp" alt="thank you note" class="width-full">
-            <h2 class="text-sky-950 text-2xl px-2 py-3">Shipping Information</h2>
+    <main class="--font-arimo">
+        <h1 class="text-sky-950 text-3xl px-2 py-3">Cart</h1>
+        <img src="images/pexels-vie-studio-4439457.webp" alt="thank you note" class="width-full">
+        <h2 class="text-sky-950 text-2xl px-2 py-3">Shipping Information</h2>
       
         <div class="flex">
           <fieldset class="bg-slate-400 border-2 border-sky-950 p-6 rounded w-full max-w-md md:max-w-2xl">
@@ -42,7 +44,6 @@
                 <input type="text" id="lastName" name="lastName" required placeholder="Last Name"
                   class="w-full p-2 rounded border placeholder-gray-400 focus:outline-none focus:outline-2 focus:outline-sky-950 transition">
               </div>
-            
       
               <!-- Address -->
               <div>
@@ -131,7 +132,7 @@
                   class="w-full p-2 rounded border placeholder-gray-400 focus:outline-2 focus:outline-sky-950 transition">
               </div>
       
-              <!-- Shipping Options (Grid Layout) -->
+              <!-- Shipping Options Grid Layout -->
               <h2 class="text-sky-950 text-2xl font-semibold mt-6">Shipping</h2>
               <div class="border rounded-xl border-zinc-400 bg-zinc-200">
                 <label class="grid grid-cols-[22px_auto_100px] space-x-1 p-2 border-b-2 border-slate-300">
@@ -141,66 +142,72 @@
                     <div class="text-right font-bold pr-1">Free</div>
                 </label>
             
-                <div class="border rounded-xl border-zinc-400 bg-zinc-200">
-                    <label class="grid grid-cols-[22px_auto_100px] space-x-1 p-2 border-b-2 border-slate-300">
-                        <input type="radio" name="Shipping" value="standard" checked/>
-                        <div class="text-sky-800 font-semibod hover:text-sky-950">Standard <span
-                            class="block text-gray-400 font-light text-xs">2 days</span></div>
-                        <div class="text-right font-bold pr-1">$10.00</div>
-                    </label>
+                <label class="grid grid-cols-[22px_auto_100px] space-x-1 p-2 border-b-2 border-slate-300">
+                    <input type="radio" name="Shipping" value="express"/>
+                    <div class="text-sky-800 font-semibod hover:text-sky-950">Express <span
+                        class="block text-gray-400 font-light text-xs">2 days</span></div>
+                    <div class="text-right font-bold pr-1">$10.00</div>
+                </label>
 
-                <div class="border rounded-xl border-zinc-400 bg-zinc-200">
-                     <label class="grid grid-cols-[22px_auto_100px] space-x-1 p-2 border-b-2 border-slate-300">
-                         <input type="radio" name="Shipping" value="standard" checked/>
-                         <div class="text-sky-800 font-semibod hover:text-sky-950">Standard <span
-                            class="block text-gray-400 font-light text-xs">1 day</span></div>
-                         <div class="text-right font-bold pr-1">$20.00</div>
-                     </label>
-
-                
-                
+                <label class="grid grid-cols-[22px_auto_100px] space-x-1 p-2">
+                    <input type="radio" name="Shipping" value="overnight"/>
+                    <div class="text-sky-800 font-semibod hover:text-sky-950">Overnight <span
+                       class="block text-gray-400 font-light text-xs">1 day</span></div>
+                    <div class="text-right font-bold pr-1">$20.00</div>
+                </label>
               </div>
             </form>
             
           </fieldset>
         </div>
 
-        <!-- Submit Button with Hover + Transition -->
-        <h2 class="text-sky-950 text-2xl font-semibold mt-6">Payment</h2>
-       
-        <section class="flex mb-5">
-        <div class="mr-3">
-            <input type="submit" value="cash app"
-              class="bg-green-600 text-white px-11 py-2 rounded w-40 md:max-w-2xl cursor-pointer 
-                     hover:bg-sky-800 transition duration-300 ease-in-out">
-         </div>
-        
-        <div class="mr-3">
-            <input type="submit" value="visa"
-              class="bg-red-600 text-white px-4 py-2 rounded w-40 md:max-w-2xl cursor-pointer 
-                     hover:bg-sky-800 transition duration-300 ease-in-out">
-        </div>
-        
-        <div>
-            <input type="submit" value="Zelle"
-              class="bg-fuchsia-400 text-white px-12 py-2 rounded w-40 md:max-w-2xl cursor-pointer 
-                     hover:bg-sky-800 transition duration-300 ease-in-out">
-        </div>
-        </section>
-        
-        <div>
-          <input type="submit" value="Place Order"
-            class="bg-sky-950 text-white px-4 py-2 rounded w-full max-w-md md:max-w-2xl cursor-pointer 
-                   hover:bg-sky-800 transition duration-300 ease-in-out">
-        </div>
+       <!-- Payment Section -->
+      <h2 class="text-sky-950 text-2xl font-semibold mt-8 mb-3 px-2">Payment</h2>
 
-      </main>
+      <section class="flex flex-wrap gap-4 mb-8 w-full max-w-md md:max-w-2xl">
+        <!-- Cash App -->
+        <button
+          type="button"
+          style="background-color: #00D64F;"
+          class="text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:opacity-90 transition duration-300 ease-in-out w-40 text-center"
+        >
+          Cash App
+        </button>
+
+        <!-- Visa -->
+        <button
+          type="button"
+          style="background-color: #1a1f71;"
+          class="text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:opacity-90 transition duration-300 ease-in-out w-40 text-center"
+        >
+          Visa
+        </button>
+
+        <!-- Zelle -->
+        <button
+          type="button"
+          style="background-color: #7024c4;"
+          class="text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:opacity-90 transition duration-300 ease-in-out w-40 text-center"
+        >
+          Zelle
+        </button>
+      </section>
+
+      <!-- Place Order Button -->
+      <div class="w-full max-w-md md:max-w-2xl">
+        <input
+          type="submit"
+          value="Place Order"
+          style="background-color: #082F49;"
+          class="text-white font-semibold px-6 py-3 rounded-lg w-full cursor-pointer hover:opacity-90 transition duration-300 ease-in-out shadow-md"
+        />
+      </div>
+    </main>
+
     <!--script for modules-->
     <script type="module" src="./cards.js"></script>
     <!--Empty footer for modules-->
     <footer></footer>
-
-        
-</div>
+  </div>
 </body>
 </html>

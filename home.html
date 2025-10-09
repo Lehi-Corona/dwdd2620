@@ -3,60 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore More Webesite</title>
+    <title>Explore More Website</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400..700&family=IBM+Plex+Mono:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    
 </head>
-<body>
+<body class="--font-arimo">
     <div class="max-w-6xl mx-auto">
     <!--Empty header for module-->
     <header></header>
     <!--Empty nav for module-->
     <nav></nav>
     <main class="max-w-screen-xl m-auto">
-    <!-- Responsive Hero Images -->
-    <h1 class="text-sky-950 text-2xl px-2 py-4">Home</h1>
-    <picture class="w-full relative">
-        <source media="(max-width: 320)" srcset="images/hero320.jpg">
-        <source media="(max-width: 768)" srcset="images/hero768.jpg">
-        <img class src="images/hero1280.jpg" alt="mountains">
-        <a class="text-white absolute bottom-4 right-4 bg-slate-400 py-2 px-2 border-sky-950 rounded border drop-shadow-lg hover:bg-gray-600" href="#">View inventory</a>
-    </picture>
-    <h2 class="text-sky-950 text-2xl px-2 py-4">Shop Now</h>
-    <!-- Start of Cards-->
-    <section class="cards">
-        <div>
-            <img src="images/winterclothes.jpg" alt="Snow Gear">
-            <span>Shop Winterclothes</span>
-            <a href="#">Check out our inventory</a>
-        </div>
-        <div>
-            <img src="images/boards.jpg" alt="Snow Gear">
-            <span>Shop Snowboards</span>
-            <a href="#">Check out our inventory</a>
-        </div>
-        <div>
-            <img src="images/skis.jpg" alt="Snow Gear">
-            <span>Shop Skis</span>
-            <a href="#">Check out our inventory</a>
-        </div>
-        <div>
-            <img src="images/aboutus.jpg" alt="Snow Gear">
-            <span>About Us</span>
-            <a href="#">Learn More</a>
-        </div>
-
-
-    </section>
-    
+        <!-- Responsive Hero Images -->
+        <h1>Home</h1>
+        <picture class="w-full relative block">
+            <source media="(max-width: 320px)" srcset="images/hero320.jpg">
+            <source media="(max-width: 768px)" srcset="images/hero768.jpg">
+            <img class="w-full" src="images/hero1280.jpg" alt="mountains">
+            <a class="text-white absolute bottom-4 right-4 bg-sky hover:bg-sky-dark font-semibold py-3 px-6 border-2 border-sky-dark rounded drop-shadow-lg transition" href="#">View Inventory</a>
+        </picture>
+        <h2 class="text-sky-950 text-2xl px-2 py-4">Shop Now</h2>
+        <!-- Start of Cards-->
+        <section class="cards">
+            <div>
+                <img src="images/winterclothes.jpg" alt="Snow Gear">
+                <span>Shop Winterclothes</span>
+                <a href="#">Check out our inventory</a>
+            </div>
+            <div>
+                <img src="images/boards.jpg" alt="Snow Gear">
+                <span>Shop Snowboards</span>
+                <a href="#">Check out our inventory</a>
+            </div>
+            <div>
+                <img src="images/skis.jpg" alt="Snow Gear">
+                <span>Shop Skis</span>
+                <a href="#">Check out our inventory</a>
+            </div>
+            <div>
+                <img src="images/aboutus.jpg" alt="Snow Gear">
+                <span>About Us</span>
+                <a href="#">Learn More</a>
+            </div>
+        </section>
     </main>
     <!--Empty footer for modules-->
     <footer></footer>
     <script src="tailwind.config.js"></script>
-     <!--script for for modules-->
+     <!--script for modules-->
     <script type="module" src="./cards.js"></script>
 </body>
 </html>
