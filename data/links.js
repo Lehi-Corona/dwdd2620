@@ -19,5 +19,9 @@ export const links = [
   {
     "name": "Color Docs",
     "href": "color-documentation.html"
+  },
+  {
+    "name": "Reviews",
+    "href": "reviews.html"
   }
 ];
